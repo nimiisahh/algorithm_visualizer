@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Heap Visualizer</title>
+  <link rel="stylesheet" href="css/data_structures/heap.css" />
+</head>
+<body>
+  <header>
+    <h1>🔺 Heap Visualizer</h1>
+    <p class="subtitle">Interactive Binary Heap Visualizer with Animated Insert, Delete & Min/Max</p>
+</p>
+  </header>
+
+  <main>
+    <section id="controls">
+      <select id="heap-type">
+        <option value="min">Min Heap</option>
+        <option value="max">Max Heap</option>
+      </select>
+      <input type="number" id="heap-size" placeholder="Array size..." />
+      <button onclick="initHeap()">Create Heap</button>
+      <br /><br />
+      <input type="number" id="heap-value" placeholder="Insert value..." />
+      <button onclick="insertHeap()">Insert</button>
+      <button id="delete-button" onclick="deleteRoot()">Delete</button>
+      <button id="peek-button" onclick="peekRoot()">Get Min</button>
+
+    </section>
+
+    <p id="message"></p>
+    <div id="heap-message" class="heap-message"></div>
+
+    <div id="heap-array-container">
+        <div id="heap-array"></div>
+        <div id="heap-indices"></div>
+      </div>
+      
+    <div id="heap-container"></div>
+  
+  </main>
+
+  <script src="js/data_structures/heap.js"></script>
+</body>
+</html>

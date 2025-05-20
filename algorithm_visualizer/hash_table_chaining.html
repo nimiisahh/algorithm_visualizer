@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Chained Hash Table</title>
+  <link rel="stylesheet" href="css/data_structures/hash_table_chaining.css" />
+</head>
+<body>
+  <header>
+    <h1>🔗 Chained Hash Table</h1>
+    <p class="subtitle">Linked list chaining visualization</p>
+  </header>
+
+  <main>
+    
+    <section id="controls">
+      <input type="number" id="table-size" placeholder="Enter table size..." />
+      <button onclick="initTable()">Create Table</button>
+      <br><br>
+      <input type="number" id="value-input" placeholder="Enter value to insert..." />
+      <div class="button-row">
+        <button onclick="insertValue()">Insert</button>
+        <button onclick="searchValue()">Search</button>
+        <button onclick="deleteValue()">Delete</button>
+
+        <button onclick="resetTable()">Reset</button>
+      </div>
+    </section>
+    <p id="message"></p>
+    <div id="hash-explanation">Hash(Key) = Key % ?</div>
+
+    <section id="table-visualization">
+      <div id="hash-table"></div>
+    </section>
+
+    <div id="hash-function-box">
+        <h3>Hash Function</h3>
+        <p id="hash-function-text">Hash(key) = key % ?</p>
+      </div>
+      
+ 
+  </main>
+
+  <script src="js/data_structures/hash_table_chaining.js"></script>
+</body>
+</html>

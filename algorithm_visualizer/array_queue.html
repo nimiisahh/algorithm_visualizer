@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Queue via Array</title>
+  <link rel="stylesheet" href="css/data_structures/array_queue.css">
+</head>
+<body>
+
+  <header>
+    <h1>📬 Queue via Array</h1>
+    <p class="subtitle">Static Array Queue — First In, First Out </p>
+  </header>
+
+  <main>
+    <section id="controls">
+      <input type="number" id="queue-capacity" placeholder="Set queue size..." />
+      <button onclick="initQueue()">Create Queue</button>
+      <br><br>
+      <input type="number" id="queue-value" placeholder="Enter value..." />
+      <div class="button-row">
+        <button onclick="enqueue()">Enqueue</button>
+        <button onclick="dequeue()">Dequeue</button>
+        <button onclick="resetQueue()">Reset</button>
+      </div>
+    </section>
+
+    <div class="labels">
+      <span class="label"></span>
+      <span class="label"></span>
+    </div>
+
+    <div id="queue-wrapper">
+      <div class="queue-boundary"></div>
+      <div id="queue-visual">
+        <div id="queue-container"></div>
+      </div>
+      <div class="queue-boundary"></div>
+    </div>
+
+    <div id="queue-info">
+      <p><strong>Queue Size:</strong> <span id="queue-size">0</span></p>
+      <p><strong>Front Value:</strong> <span id="front-value">None</span></p>
+    </div>
+  </main>
+
+  <script src="js/data_structures/array_queue.js"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bubble Sort Visualizer</title>
+  <link rel="stylesheet" href="css/algorithms/bubble_sort.css">
+</head>
+<body>
+
+  <h1>Bubble Sort Visualizer</h1>
+
+  <div id="controls">
+    <button onclick="startBubbleSort()">Start Bubble Sort</button>
+    <button onclick="generateNewArray()">Generate New Array</button>
+    <br><br>
+    <label id="array-size-label" for="array_size">Array Size:</label>
+    <input type="range" id="array_size" min="2" max="20" value="10" oninput="updateArraySizeDisplay(this.value)">
+    <span id="array_size_display">10</span>
+  </div>
+
+  <div id="comparison-display"></div>
+  <div id="status-message" style="font-size: 18px; color: #777; margin-top: 10px;"></div>
+  <div id="array-container"></div>
+
+  <button id="toggle-info-btn" onclick="toggleAlgorithmInfo()">Show The Algorithm's Info</button>
+
+  <div id="algorithm-info" style="display: none;">
+    <h2>Algorithm Efficiency</h2>
+    <p>
+      Bubble Sort is a simple but inefficient sorting algorithm. In both the worst and average cases, 
+      it has a time complexity of <strong>O(n²)</strong>, which means the execution time grows 
+      quadratically with the size of the array.
+    </p>
+    <p>
+      - <strong>Best Case:</strong> O(n) — when the array is already sorted<br>
+      - <strong>Average/Worst Case:</strong> O(n²) — many comparisons and swaps are needed
+    </p>
+    <p>
+      Due to its inefficiency, Bubble Sort is mainly used for educational purposes, to demonstrate 
+      the concept of sorting via repeated comparisons and swaps.
+    </p>
+  </div>
+
+  <canvas id="confetti-canvas"></canvas>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+  <script src="js/algorithms/bubble_sort.js"></script>
+</body>
+</html>

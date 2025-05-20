@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Stack via Array</title>
+  <link rel="stylesheet" href="css/data_structures/array_stack.css">
+</head>
+<body>
+  <header>
+    <h1>📦 Stack via Array</h1>
+    <p class="subtitle">Push, Pop & top - A Visual Guide to Array Stacks</p>
+  </header>
+
+  <main>
+    <section id="controls">
+      <input type="number" id="stack-capacity" placeholder="Set stack size..." />
+      <button onclick="initStack()">Create Stack</button>
+      <br><br>
+      <input type="number" id="stack-value" placeholder="Enter value..." />
+      <div class="button-row">
+        <button onclick="push()">Push</button>
+        <button onclick="pop()">Pop</button>
+        <button onclick="getTop()">Top</button>
+        <button onclick="resetStack()">Reset</button>
+      </div>
+    </section>
+
+    <div id="stack-container"></div>
+    <div id="stack-message"></div>
+
+    <div id="stack-info">
+      <p><strong>Stack Size:</strong> <span id="stack-size">0</span></p>
+      <p><strong>Top Value:</strong> <span id="top-value">None</span></p>
+    </div>
+  </main>
+
+  <script src="js/data_structures/array_stack.js"></script>
+</body>
+</html>

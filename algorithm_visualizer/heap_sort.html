@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Heap Sort Visualizer</title>
+  <link rel="stylesheet" href="css/algorithms/heap_sort.css" />
+</head>
+<body>
+  <h1>Heap Sort Visualizer</h1>
+  <div id="controls">
+    <button onclick="generateArray()">Generate Array</button>
+    <button onclick="startHeapSort()">Start Heap Sort</button>
+    <label for="size">Size:</label>
+    <input type="range" id="size" min="4" max="20" value="10" oninput="updateSizeLabel(this.value)">
+    <span id="size-label">10</span>
+  </div>
+  <div id="array-bar" style="margin-top: 20px; display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;"></div>
+
+  <div id="heap-container"></div>
+
+  <div id="sorted-array">
+    <h3>Sorted Array</h3>
+    <div id="sorted-array-boxes"></div>
+  </div>
+  <button id="toggle-info-btn">Show The Algorithm's Info</button>
+
+  <div id="algorithm-info" style="display: none;">
+    <h3>Algorithm:</h3>
+    <p>
+      Heap Sort is a comparison-based sorting algorithm that uses a binary heap data structure.
+      It first builds a max heap from the input array, then repeatedly extracts the maximum element from the heap and places it at the end of the array.
+    </p>
+  
+    <h3 style="color: crimson;">Efficiency Analysis:</h3>
+    <ul style="text-align: left;">
+      <li><strong>Time Complexity:</strong> Θ(n·log n)</li>
+    </ul>
+    <p style="border: 1px solid crimson; padding: 8px; border-radius: 6px;">
+      <strong>Note:</strong> Heap Sort is not a stable sort, but it is in-place and guarantees O(n log n) time regardless of input.
+    </p>
+  </div>
+  
+  <script src="js/algorithms/heap_sort.js"></script>
+</body>
+</html>

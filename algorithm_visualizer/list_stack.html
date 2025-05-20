@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Linked List Stack</title>
+  <link rel="stylesheet" href="css/data_structures/list_stack.css">
+</head>
+<body>
+  <header>
+    <h1>🔗 Stack via Linked List</h1>
+    <p class="subtitle">Visualizing a Stack Using a Linked List Structure</p>
+  </header>
+
+  <main>
+    <section id="controls">
+      <input type="number" id="stack-value" placeholder="Enter value..." />
+      <div class="button-row">
+        <button onclick="push()">Push</button>
+        <button onclick="pop()">Pop</button>
+        <button onclick="getTop()">Top</button>
+
+        <button onclick="resetStack()">Reset</button>
+      </div>
+    </section>
+
+    <div class="stack-wrapper">
+        <p id="message"></p>
+
+        <div id="stack-head">HEAD</div>
+        <div class="arrow-down"></div>
+
+        <div id="stack-container"></div>
+        
+        <div id="null-box">NULL</div> 
+      </div>
+      
+      
+
+    <div id="stack-info">
+      <p><strong>Stack Size:</strong> <span id="stack-size">0</span></p>
+      <p><strong>Top Value:</strong> <span id="top-value">None</span></p>
+    </div>
+
+    <script src="js/data_structures/list_stack.js"></script>
+  </main>
+</body>
+</html>
