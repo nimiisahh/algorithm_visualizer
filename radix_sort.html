@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Radix Sort Visualizer</title>
+  <link rel="stylesheet" href="css/algorithms/radix_sort.css" />
+</head>
+<body>
+  <h1>Radix Sort</h1>
+
+  <div id="controls">
+    <label id="array-size-label">Array Size:</label>
+    <input type="range" id="array_size" min="3" max="20" value="10" />
+    <span id="array_size_display">10</span>
+    <br />
+    <button id="generate-btn">Generate New Array</button>
+    <button id="start-btn">Start Sorting</button>
+  </div>
+
+  <div id="live-explanation"></div>
+  <div id="array-container"></div>
+  <div id="bucket-row"></div>
+  <button id="toggle-info-btn">Show The Algorithm's Info</button>
+
+  <div id="algorithm-info" style="display: none;">
+    <h3>Algorithm:</h3>
+    <p>
+      Radix Sort processes each digit of the numbers starting from the least significant digit (LSD).
+      It repeatedly applies a stable sort (like Bucket Sort) based on the current digit.
+      The process continues for all digit places until the list is sorted.
+    </p>
+  
+    <h3 style="color: crimson;">Efficiency Analysis:</h3>
+    <ul style="text-align: left;">
+      <li><strong>Time Complexity:</strong> Θ(d·(n + k))</li>
+      <li><strong>Space Complexity:</strong> Θ(n + k)</li>
+    </ul>
+    <p style="border: 1px solid crimson; padding: 8px; border-radius: 6px;">
+      <strong>Note:</strong> d is the number of digits, n is the number of elements, and k is the range of digit values (typically 10 in base-10).
+    </p>
+  </div>
+  
+
+  <canvas id="confetti-canvas"></canvas>
+  <script src="js/algorithms/radix_Sort.js"></script>
+</body>
+</html>

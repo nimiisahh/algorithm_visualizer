@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bucket Sort Visualizer</title>
+  <link rel="stylesheet" href="css/algorithms/bucket_sort.css">
+</head>
+<body>
+  <h1>Bucket Sort Visualizer</h1>
+
+  <div id="controls">
+    <button id="start-btn">Start Bucket Sort</button>
+    <button id="generate-btn">Generate New Array</button>
+    <br><br>
+    <label id="array-size-label" for="array_size">Array Size:</label>
+    <input type="range" id="array_size" min="2" max="20" value="10">
+    <span id="array_size_display">10</span>
+  </div>
+
+  <div id="status-message"></div>
+  <div id="live-explanation"></div>
+
+  <div id="array-wrapper">
+    <div id="array-container"></div>
+  </div>
+
+  <div id="bucket-row">
+  </div>
+
+  <button id="toggle-info-btn">Show The Algorithm's Info</button>
+
+  <div id="algorithm-info" style="display: none;">
+    <h2>Algorithm Efficiency</h2>
+    <p>
+      Bucket Sort is an efficient algorithm when the input is uniformly distributed over a range. It works by dividing elements into buckets and then sorting each bucket individually.
+    </p>
+    <p>
+      <strong>Time Complexity:</strong> Θ(n + k)<br>
+      <strong>Space Complexity:</strong> Θ(k)<br>
+      where n is the number of elements and k is the range of input values (assuming values in {0,...,k-1}).
+    </p>
+    <p>
+      The implementation assumes all elements in the array are integers in the range {0, ..., k-1}.
+    </p>
+  </div>
+
+  <canvas id="confetti-canvas"></canvas>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+  <script src="js/algorithms/bucket_sort.js"></script>
+</body>
+</html>

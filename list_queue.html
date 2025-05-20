@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Queue via Linked List</title>
+  <link rel="stylesheet" href="css/data_structures/list_queue.css">
+</head>
+<body>
+
+  <header>
+    <h1>🔗 Queue via Linked List</h1>
+    <p class="subtitle">First-In-First-Out (FIFO) queue implemented using linked nodes</p>
+  </header>
+
+  <main>
+    <section id="controls">
+      <input type="number" id="queue-value" placeholder="Enter value..." />
+      <div class="button-row">
+        <button onclick="enqueue()">Enqueue</button>
+        <button onclick="dequeue()">Dequeue</button>
+        <button onclick="resetQueue()">Reset</button>
+      </div>
+    </section>
+
+    <div class="labels">
+      <span class="label"></span>
+      <span class="label"></span>
+    </div>
+
+    <div id="queue-wrapper">
+      
+      <div id="queue-container">
+        <div id="null-box">NULL</div>
+      </div>
+    </div>
+    
+
+    <div id="queue-info">
+      <p><strong>Queue Size:</strong> <span id="queue-size">0</span></p>
+      <p><strong>Front Value:</strong> <span id="front-value">None</span></p>
+    </div>
+
+    <script src="js/data_structures/list_queue.js"></script>
+  </main>
+
+</body>
+</html>

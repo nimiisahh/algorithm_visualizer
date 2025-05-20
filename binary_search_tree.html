@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Binary Search Tree</title>
+  <link rel="stylesheet" href="css/data_structures/binary_search_tree.css">
+</head>
+<body>
+
+  <header>
+    <h1>🔍 Binary Search Tree</h1>
+    <p class="subtitle">Insert, search, and visualize a binary search tree with smooth connections</p>
+  </header>
+
+  <main>
+    <section id="controls">
+      <input type="number" id="bst-value" placeholder="Enter value..." />
+      <div class="button-row">
+        <button onclick="insertValue()">Insert</button>
+        <button onclick="searchValue()">Search</button>
+        <button onclick="deleteValue()">Delete</button>
+
+        <button onclick="resetTree()">Reset</button>
+        
+      </div>
+      <div class="button-row">
+        <button onclick="runTraversal('in')">In-Order</button>
+        <button onclick="runTraversal('pre')">Pre-Order</button>
+        <button onclick="runTraversal('post')">Post-Order</button>
+      </div>
+      
+      <div id="traversal-box">
+        <div id="traversal-title">Traversal Output</div>
+        <div id="traversal-output"></div>
+      </div>
+            
+    </section>
+    <p id="message"></p>
+
+    <div id="tree-container">
+      <svg id="connection-lines"></svg>
+    </div>
+
+    <section id="output">
+    </section>
+  </main>
+
+  <script src="js/data_structures/binary_search_tree.js"></script>
+</body>
+</html>

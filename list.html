@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Linked List Visualizer</title>
+  <link rel="stylesheet" href="css/data_structures/list.css">
+</head>
+<body>
+  <header>
+    <h1>🔗 Linked List Visualizer</h1>
+    <p class="subtitle">Build, edit, and explore a simple linked list structure</p>
+  </header>
+
+  <main>
+
+
+
+    <section id="controls">
+      <input type="number" id="node-value" placeholder="Enter value..." />
+      <div class="button-row">
+        <button onclick="createNewList()">Create New List</button>
+        <button onclick="addAtBeginning()">Add at Beginning</button>
+        <button onclick="addAtEnd()">Add at End</button>
+        <button onclick="deleteByValue()">Delete by Value</button>
+        <button onclick="clearList()">Clear List</button>
+      </div>
+    </section>
+
+    <section id="list-visual">
+      <div id="list-container"></div>
+      
+    </section>
+
+    <div id="message"></div>
+    <button onclick="toggleMemoryView()">🧠 Memory View</button>
+
+    <div id="memory-box" class="hidden">
+      <div class="memory-header">🔍 Simulated Memory View</div>
+      <pre id="memory-view"></pre>
+      
+      <div class="memory-footer">* Memory addresses are randomly generated for demonstration purposes only.</div>
+    </div>
+  </main>
+
+
+  <script src="js/data_structures/list.js"></script>
+
+</body>
+</html>

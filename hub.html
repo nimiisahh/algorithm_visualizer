@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Algorithm Visualizer</title>
+  <link rel="stylesheet" href="css/hub.css">
+
+  <script>
+    function showTab(tabId) {
+      document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
+      document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+      document.getElementById(tabId).classList.add('active');
+      document.querySelector(`.tab[data-tab="${tabId}"]`).classList.add('active');
+    }
+    window.onload = () => showTab('algorithms');
+  </script>
+</head>
+<body>
+
+  <header>
+    <h1>Algorithm Visualizer</h1>
+    <p>Learn algorithms and data structures interactively</p>
+  </header>
+
+  <ul class="tabs">
+    <li class="tab" data-tab="algorithms" onclick="showTab('algorithms')">Algorithms</li>
+    <li class="tab" data-tab="structures" onclick="showTab('structures')">Data Structures</li>
+  </ul>
+
+  <main>
+    <div id="algorithms" class="tab-content">
+      <div class="cards-container">
+        <a href="bubble_sort.html" class="card">
+          <div class="card-icon">🫧</div>
+          <h2>Bubble Sort</h2>
+          <p>Simple sorting algorithm by repeatedly swapping adjacent elements.</p>
+        </a>
+
+        <a href="merge_sort.html" class="card">
+          <div class="card-icon">🔀</div>
+          <h2>Merge Sort</h2>
+          <p>Efficient divide-and-conquer algorithm: splits the array and merges sorted parts.</p>
+        </a>
+
+        <a href="quicksort.html" class="card">
+          <div class="card-icon">⚡️</div>
+          <h2>Quick Sort</h2>
+          <p>Fast divide-and-conquer method: selects a pivot and recursively sorts partitions.</p>
+        </a>
+        <a href="selection.html" class="card">
+          <div class="card-icon">🎯</div>
+          <h2>Selection</h2>
+          <p>Efficient pivot-based algorithm to find the k-th smallest element without full sorting.</p>
+        </a>
+        <a href="bucket_sort.html" class="card">
+          <div class="card-icon">🪣</div>
+          <h2>Bucket Sort</h2>
+          <p>Groups numbers into buckets by value, then combines them back in order — fast and visual!</p>
+        </a>
+        
+        <a href="radix_sort.html" class="card">
+          <div class="card-icon">🔢</div>
+          <h2>Radix Sort</h2>
+          <p>Sorts numbers digit by digit using stable bucket-based passes — ideal for fixed-length integers.</p>
+        </a>
+        <a href="heap_sort.html" class="card">
+          <div class="card-icon">🗻</div>
+          <h2>Heap Sort</h2>
+          <p>Sorts using a binary heap structure — efficient, in-place, and guarantees O(n log n) time.</p>
+        </a>
+        
+      </div>
+    </div>
+
+    <div id="structures" class="tab-content">
+      <div class="cards-container">
+        <a href="list.html" class="card">
+          <div class="card-icon">🔗</div>
+          <h2>Linked List</h2>
+          <p>Build and explore a dynamic list where each node points to the next.</p>
+        </a>
+
+        <a href="array_stack.html" class="card">
+          <div class="card-icon">📦</div>
+          <h2>Stack (Array)</h2>
+          <p>Explore how an array-based stack works, using push, pop and top functions.</p>
+        </a>
+
+        <a href="list_stack.html" class="card">
+          <div class="card-icon">🔗</div>
+          <h2>Stack (Linked List)</h2>
+          <p>Explore how a Linked List-based stack works, using push, pop and top functions.</p>
+        </a>
+
+        <a href="array_queue.html" class="card">
+          <div class="card-icon">⏳</div>
+          <h2>Queue (Array)</h2>
+          <p>Explore FIFO logic with an interactive, array-backed queue.</p>
+        </a>
+
+        <a href="list_queue.html" class="card">
+          <div class="card-icon">⏳</div>
+          <h2>Queue (Linked List)</h2>
+          <p>Explore FIFO logic with an interactive, Linked List-backed queue</p>
+        </a>
+
+        <a href="binary_search_tree.html" class="card">
+          <div class="card-icon">🔍🌳</div>
+          <h2>Binary Search Tree</h2>
+          <p>Visualize how a binary search tree grows and changes with each operation.</p>
+        </a>
+
+        <a href="hash_table_chaining.html" class="card">
+          <div class="card-icon">🔗📊</div>
+          <h2>Hash Table (Chaining)</h2>
+          <p>Explore how a hash table handles insert, search, and delete with chaining-based collision resolution.</p>
+        </a>
+
+        <a href="hash_table_probing.html" class="card">
+          <div class="card-icon">🔐📊</div>
+          <h2>Hash Table (Probing)</h2>
+          <p>Explore insert, search, and delete in a closed-address hash table using linear, quadratic, or double hashing.</p>
+        </a>
+
+        <a href="heap.html" class="card">
+          <div class="card-icon">🌲🔢</div>
+          <h2>Heap</h2>
+          <p>Visualize a binary heap structure with insert and remove operations.</p>
+        </a>
+        <a href="disjointed_sets.html" class="card">
+          <div class="card-icon">🧩🌳</div>
+          <h2>Disjoint Set</h2>
+          <p>Explore the Union-Find data structure with visualized unions, finds, and path compression.</p>
+        </a>
+      </div>
+    
+      
+    </div>
+  </main>
+
+</body>
+</html>

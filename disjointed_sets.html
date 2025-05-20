@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Disjoint Set Visualizer</title>
+  <link rel="stylesheet" href="css/data_structures/disjointed_sets.css">
+</head>
+<body>
+  <header>
+    <h1>🧩 Disjoint Set Visualizer</h1>
+    <p class="subtitle">Visualizing the Union-Find Data Structure in Action</p>
+  </header>
+  <canvas id="ds-lines"></canvas>
+
+  <main>
+    <section id="controls">
+        <input type="number" id="array-size" placeholder="Array size..." min="1" max="20">
+        <button onclick="createDisjointSet()">Create Set</button>
+      <br><br>
+
+      <input type="number" id="element-x" placeholder="Element X">
+      <input type="number" id="element-y" placeholder="Element Y">
+      <button onclick="unionSets()">Union(X, Y)</button>
+      <br><br>
+
+      <input type="number" id="element-find" placeholder="Find(X)">
+      <button onclick="findSet()">Find</button>
+      <br><br>
+
+      <label><input type="checkbox" id="use-size"> Union by Size</label>
+      <label><input type="checkbox" id="use-compression"> Path Compression</label>
+      <br><br>
+
+      <button onclick="resetDisjointSet()">Reset</button>
+    </section>
+
+    <div id="ds-array-container">
+      <div id="ds-array"></div>
+      <div id="ds-indices"></div>
+    </div>
+
+    <div id="ds-forest"></div>
+    <div id="ds-message"></div>
+  </main>
+
+  <script src="js/data_structures/disjointed_sets.js"></script>
+</body>
+</html>

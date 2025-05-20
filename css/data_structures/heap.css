@@ -1,0 +1,199 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #ffebee, #ffcdd2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  header {
+    text-align: center;
+    padding: 40px 20px 10px;
+  }
+  
+  header h1 {
+    font-size: 36px;
+    color: #b71c1c;
+  }
+  
+  .subtitle {
+    color: #c62828;
+  }
+  
+  #controls {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  input, select {
+    padding: 10px;
+    margin: 5px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: #e53935;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  button:hover {
+    background-color: #b71c1c;
+    transform: translateY(-2px);
+  }
+  
+  #heap-container {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .heap-node {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: white;
+    border: 2px solid #e53935;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: #b71c1c;
+    position: relative;
+    transition: transform 0.5s ease;
+  }
+  
+  .heap-node.highlight {
+    background-color: #ffcdd2;
+    border-color: #b71c1c;
+  }
+  
+
+  #heap-container {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    margin-top: 20px;
+  }
+  
+  .heap-node {
+    transition: top 0.5s ease, left 0.5s ease;
+  }
+  
+  #heap-lines {
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  #heap-array-container {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  #heap-array, #heap-indices {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+  }
+  
+  .heap-cell {
+    width: 45px;
+    height: 45px;
+    background-color: #fdf5f5;
+    border: 2px solid #d32f2f;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-size: 18px;
+    color: #b71c1c;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+  }
+  
+  .heap-index {
+    width: 45px;
+    height: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    font-weight: 500;
+    color: #555;
+    margin-top: 2px;
+  }
+  
+  .highlight-peek {
+    background-color: #ffe082 !important;
+    border: 2px solid #ff9800 !important;
+  }
+  
+  #heap-message {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 16px;
+    font-weight: 500;
+    color: #5d4037;
+    padding: 12px 24px;
+    border-radius: 12px;
+    display: none;
+    z-index: 1000;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    text-align: center;
+    background-color: #fff3e0;
+    border: 2px solid #f57c00;
+    animation: fadeInOut 3s ease-in-out;
+  }
+  
+  @keyframes fadeInOut {
+    0% { opacity: 0; transform: translateX(-50%) translateY(20px); }
+    10% { opacity: 1; transform: translateX(-50%) translateY(0); }
+    90% { opacity: 1; transform: translateX(-50%) translateY(0); }
+    100% { opacity: 0; transform: translateX(-50%) translateY(20px); }
+  }
+  
+
+  #hash-calculation-box {
+    position: absolute;
+    top: 150px;
+    left: 20px;
+    width: 300px;
+    background: #ffffffcc;
+    border: 2px solid #03a9f4;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+    font-family: monospace;
+    text-align: left;
+}
+
+#hash-calculation-box h3 {
+    margin-top: 0;
+    color: #0277bd;
+    font-size: 16px;
+}
+
+#hash-calculation-text {
+    font-size: 14px;
+    color: #01579b;
+}

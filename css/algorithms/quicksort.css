@@ -1,0 +1,208 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #fce4ec, #f3e5f5);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  
+  h1 {
+    margin-top: 30px;
+    color: #8e24aa;
+    font-size: 36px;
+  }
+  
+  #controls {
+    margin: 30px auto;
+    padding: 15px;
+    border-radius: 12px;
+    width: fit-content;
+  }
+  
+  button {
+    background-color: #ab47bc;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    margin: 5px 8px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #8e24aa;
+  }
+  
+  input[type=range] {
+    width: 200px;
+    margin-left: 10px;
+  }
+  
+  #array-size-label {
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 5px;
+    color: #6a1b9a;
+  }
+  
+  #array_size_display {
+    font-weight: bold;
+    font-size: 20px;
+    color: #6a1b9a;
+  }
+  
+  #comparison-display {
+    font-size: 28px;
+    margin: 10px 0 20px 0;
+    font-weight: bold;
+    color: #6a1b9a;
+  }
+  
+  #status-message {
+    color: #6a1b9a;
+  }
+  
+  #live-explanation {
+    font-size: 20px;
+    margin-top: 10px;
+    color: #4a148c;
+  }
+  
+ 
+  
+  #array-container {
+    margin: 60px auto 20px auto;
+    width: fit-content;
+    min-width: 95%;
+    max-width: 1200px;   
+    height: 600px;
+    background: #f3e5f5;
+    border: 2px solid #ce93d8;
+    border-radius: 12px;
+    position: relative;
+    overflow-x: visible;
+    overflow-y: visible;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  }
+  
+  #array-wrapper {
+    display: flex;
+    justify-content: center;
+    overflow-x: auto;
+  }
+  
+  .array-box-wrapper {
+    position: absolute;
+    transition: top 0.4s ease, left 0.4s ease;
+  }
+  
+  .array-box {
+    width: 48px;
+    height: 48px;
+    background-color: #ffffff;
+    border: 2px solid #ab47bc;
+    border-radius: 12px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 20px;
+    color: #4a148c;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  }
+  
+  #algorithm-info {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 25px;
+    background-color: #f8bbd0;
+    border: 1px solid #e1bee7;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+    text-align: left;
+    color: #4a148c;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  
+  #toggle-info-btn {
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #ba68c8;
+    color: white;
+    border-radius: 6px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  #toggle-info-btn:hover {
+    background-color: #9c27b0;
+  }
+  
+  #confetti-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1000;
+  }
+  
+  .pivot {
+    background-color: #ef5350 !important;
+    color: white;
+    border: 2px solid #b71c1c;
+  }
+  
+  .pointer-i {
+    background-color: #42a5f5 !important; 
+    color: white;
+    border: 2px solid #1565c0;
+  }
+  
+  .pointer-j {
+    background-color: #66bb6a !important; 
+    color: white;
+    border: 2px solid #2e7d32;
+  }
+  
+
+  .array-box::after {
+  content: attr(data-label);
+  position: absolute;
+  font-size: 12px;
+  top: 52px;
+  color: #b71c1c;
+}
+
+.pivot-global {
+  border-width: 3px;
+  font-weight: bold;
+}
+
+.pivot-level-0 {
+  background-color: #ef5350 !important;
+}
+.pivot-level-1 {
+  background-color: #ffa726 !important;
+}
+.pivot-level-2 {
+  background-color: #ffee58 !important;
+  color: #000 !important;
+}
+.pivot-level-3 {
+  background-color: #66bb6a !important;
+}
+.pivot-level-4 {
+  background-color: #42a5f5 !important;
+}
+.pivot-level-5 {
+  background-color: #ab47bc !important;
+}

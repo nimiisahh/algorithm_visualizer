@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Selection Visualizer</title>
+  <link rel="stylesheet" href="css/algorithms/selection.css">
+</head>
+<body>
+  <h1> Selection Visualizer</h1>
+
+  <div id="controls">
+    <button id="start-btn">Start Selection</button>
+    <button id="generate-btn">Generate New Array</button>
+    <br><br>
+    <label id="array-size-label" for="array_size">Array Size:</label>
+    <input type="range" id="array_size" min="2" max="20" value="10">
+    <span id="array_size_display">10</span>
+    <br><br>
+    <label for="k-input">Find k-th smallest element (k):</label>
+    <input type="number" id="k-input" min="1" value="5">
+  </div>
+
+  <div id="comparison-display"></div>
+  <div id="live-explanation"></div>
+  <div id="array-container"></div>
+
+  <button id="toggle-info-btn">Show Algorithm Info</button>
+  <div id="algorithm-info" style="display:none;">
+    <h2>Algorithm: Selection</h2>
+    <p>
+        Selection is used to find the <strong>k-th smallest</strong> element in an unsorted array.
+      It works by choosing a pivot (like in QuickSort), and partitioning the array:
+    </p>
+    <ul>
+      <li>If k equals the pivot's position, return it.</li>
+      <li>If k is smaller, recurse into the left partition.</li>
+      <li>If k is larger, recurse into the right partition.</li>
+    </ul>
+    <p>
+      <strong>Time Complexity:</strong><br>
+      Best Case: Θ(n)<br>
+      Average Case: Θ(n)<br>
+      Worst Case: O(n²)
+    </p>
+  </div>
+
+  <canvas id="confetti-canvas"></canvas>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+  <script src="js/algorithms/selection.js"></script>
+</body>
+</html>
