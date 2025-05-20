@@ -5,7 +5,7 @@ binary trees, queues, hash tables, heaps, and more.
 
 ## 💻 Live Demo
 
-[🔗 View Live Website]([https://yourusername.github.io/repo-name/](https://nimiisahh.github.io/algorithm_visualizer/))
+[🔗 View Live Website](https://nimiisahh.github.io/algorithm_visualizer/))
 
 
 ## 🧰 Technologies Used
